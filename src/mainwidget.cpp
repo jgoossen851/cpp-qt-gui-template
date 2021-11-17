@@ -1,5 +1,5 @@
 #include <QtWidgets>
-#include "mainwidget.h"
+#include "../include/mainwidget.h"
 
 // Constructor for main window
 MainWidget::MainWidget(QWidget *parent) :

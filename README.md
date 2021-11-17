@@ -16,26 +16,27 @@ Initial template Qt project copied from https://www.linux.org/threads/c-tutorial
 To initialize (only necessary once):
 
 ```bash
-qmake -project
-sed -i '/^INCLUDEPATH.*/a \\nQT += widgets' cpp-qt-gui-template.pro
+mkdir -p build
+qmake -project -o build/cpp-qt-gui-template.pro
+sed -i '/^INCLUDEPATH.*/a \\nQT += widgets' build/cpp-qt-gui-template.pro
 ```
 
 To build:
 
 ```bash
-qmake cpp-qt-gui-template.pro
-make
+qmake -o build/Makefile cpp-qt-gui-template.pro
+make --directory=build
 ```
 
 To run:
 
 ```bash
-./cpp-qt-gui-template
+./build/cpp-qt-gui-template
 ```
 
 To clean:
 
 ```bash
-make distclean
+make --directory=build distclean
 ```
 

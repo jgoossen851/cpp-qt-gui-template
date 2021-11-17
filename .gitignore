@@ -92,3 +92,6 @@ compile_commands.json
 # Binary Executable
 cpp-qt-gui-template
 
+# Build directory
+/build/
+
